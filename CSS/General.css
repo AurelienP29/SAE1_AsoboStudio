@@ -1,3 +1,19 @@
 .navigation-bar{
     background-color: #d2dae2;
 }
+
+.icon-link{
+    font-size: 20px;
+}
+
+.footer-nabu{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.footer-nabu > div{
+    padding: 0 !important;
+}
+
+.footer-text-links{
+    padding-right: 25px;
+}
