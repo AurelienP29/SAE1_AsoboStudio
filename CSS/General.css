@@ -1,3 +1,16 @@
+main{
+    z-index: 1;
+    padding-top: 66px;
+    overflow-x: hidden;
+}
+
+header{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .navigation-bar{
     background-color: #d2dae2;
 }

@@ -1,0 +1,63 @@
+main > section{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.presentation-section{
+    background-color: #a3e6df;
+    height: 80vh;
+}
+
+.presentation-text{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+#pre-text-1{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    font-size: 40pt;
+    font-weight: bold;
+}
+
+#pre-text-2{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    font-size: 30pt;
+
+}
+
+.presentation-images{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+
+
+.games-section{
+    background-color: #a3e6af;
+    height: 50vh;
+
+}
+
+.actus-section{
+    background-color: #e6d3a3;
+    height: 50vh;
+
+}
+
+.stats-section{
+    background-color: #c3a3e6;
+    height: 50vh;
+
+}
