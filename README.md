@@ -2,7 +2,7 @@
 
 ## Sujet    
 
-[Asobo Studio](https://aurelienp29.github.io/SAE1_AsoboStudio/index.html)
+Asobo Studio : [Lien vers le site](https://aurelienp29.github.io/SAE1_AsoboStudio/index.html)
 
 ## Membres du groupe :
 
