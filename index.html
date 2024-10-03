@@ -10,12 +10,18 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/General.css">
     <link rel="stylesheet" href="CSS/Accueil.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Amiko:wght@400;600;700&family=Anton&family=Gabarito:wght@400..900&family=Oswald:wght@200..700&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&family=Sora:wght@100..800&display=swap');
+    </style>
+
+
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-extended-sm bg-secondary">
         <div class="container-fluid navigation-bar">
-            <a href="index.html"><img src="Images/Asobo_Studio_Logo.png" alt="Asobo Studio Logo" height="50" width="auto"></a>
+            <a href="index.html"><img src="Images/Asobo_Studio_Logo.png" alt="Asobo Studio Logo" height="50"
+                                      width="auto"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,13 +49,13 @@
 
 <main>
 
-    <section class="presentation-section">
-        <div class="presentation-text">
-            <span id="pre-text-1">Présentation d'Asobo Studio</span>
-            <span id="pre-text-2">Un studio important dans le monde du jeu vidéo</span>
+    <section class="intro-section">
+        <div class="intro-text">
+            <h1 id="intro-text-1">Présentation d'Asobo Studio</h1>
+            <h2 id="intro-text-2">Un studio important dans le monde du jeu vidéo</h2>
         </div>
-        <div class="presentation-images">
-            <img src="Images/Accueil/presentation_image_asobo.jpg" alt="Image accueil Asobo" height="100%" width="auto">
+        <div class="intro-images">
+            <img src="Images/Accueil/intro_image_asobo.jpg" alt="Image accueil Asobo" height="100%" width="auto">
         </div>
     </section>
 
@@ -62,7 +68,7 @@
                             <img src="Images/Accueil/plague-tale-requiem.jpg" alt="Plague Tale:Requiem">
                         </div>
                         <div class="game-card-text">
-                            <span class="game-title">A Plague Tale : Requiem</span>
+                            <h2 class="game-title">A Plague Tale : Requiem</h2>
                             <span>Plus d'informations : <a href="#" class="icon-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -79,7 +85,7 @@
                             <img src="Images/Accueil/flight_simulator.jpg" alt="Microsoft Flight Simulator">
                         </div>
                         <div class="game-card-text">
-                            <span class="game-title">Microsoft Flight Simulator</span>
+                            <h2 class="game-title">Microsoft Flight Simulator</h2>
                             <span>Plus d'informations : <a href="#" class="icon-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -96,7 +102,7 @@
                             <img src="Images/Accueil/plague_tale_innocence.jpg" alt="Plague Tale:Innocence">
                         </div>
                         <div class="game-card-text">
-                            <span class="game-title">A Plague Tale : Innocence</span>
+                            <h2 class="game-title">A Plague Tale : Innocence</h2>
                             <span>Plus d'informations : <a href="#" class="icon-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -113,7 +119,7 @@
                             <img src="Images/Accueil/the_crew_2.jpg" alt="The Crew 2">
                         </div>
                         <div class="game-card-text">
-                            <span class="game-title">The Crew 2</span>
+                            <h2 class="game-title">The Crew 2</h2>
                             <span>Plus d'informations : <a href="#" class="icon-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -131,12 +137,23 @@
         </div>
     </section>
 
+    <section class="presentation-section">
+        <div class="presentation-text">
+            <h2 class="presentation-title">Parcours pour en arriver ici</h2><br><br>
+            <p class="presentation-description">Suivez l'histoire du studio et ses jeux phares pour mieux
+                comprendre qui est derrière Asobo ... <a href="#">Lire la suite</a></p>
+        </div>
+        <div class="presentation-image">
+            <img src="Images/Accueil/presentation_image.jpg" alt="Image Présentation">
+        </div>
+    </section>
+
     <section class="actus-section">
         <div class="actus-image">
-            <img src="Images/Accueil/actus_img.png">
+            <img src="Images/Accueil/actus_img.png" alt="Image Actualité">
         </div>
         <div class="actus-text">
-            <span class="actus-title">Asobo autour du monde - Rallye Toulouse St-Louis 38È</span><br><br>
+            <h2 class="actus-title">Asobo autour du monde - <br>Rallye Toulouse St-Louis 38È</h2><br><br>
             <p class="actus-description">Le Rallye Toulouse - Saint Louis fait son grand retour !<br>
                 Après deux ans d'interruption liée à ... <a href="#">Lire la suite</a></p>
         </div>
@@ -144,12 +161,23 @@
 
     <section class="stats-section">
         <div class="stats-text">
-            <span class="stats-title">Chiffres RH de l'année 2023</span><br><br>
+            <h2 class="stats-title">Chiffres RH de l'année 2023</h2><br><br>
             <p class="stats-description">Dans une démarche de transparence, nous partageons nos données
-                annuelles sur ... <a href="#">Lire la suite</a></p>
+                <br>annuelles sur ... <a href="#">Lire la suite</a></p>
         </div>
         <div class="stats-image">
-            <img src="Images/Accueil/stats_img.png">
+            <img src="Images/Accueil/stats_img.png" alt="Image Stats">
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="map-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.7946575740566!2d-0.5531164086933347!3d44.825747796478886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55287864677cfb%3A0x5c7c0a08a6f5ee56!2sAsobo%20Studio!5e0!3m2!1sfr!2sfr!4v1727968444476!5m2!1sfr!2sfr"
+                    width="750" height="466" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map-text">
+            <h2 class="map-title">Emplacement du siege</h2>
         </div>
     </section>
 

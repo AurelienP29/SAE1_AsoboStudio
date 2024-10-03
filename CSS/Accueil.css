@@ -7,33 +7,63 @@ main > section{
     background-color: #f1f1f1;
 }
 
-.presentation-section{
-    height: 80vh;
+h1{
+    /*font-family: "Anton", sans-serif;
+    font-size: 55pt;*/
+    font-family: "Gabarito", sans-serif;
+    font-size: 55pt;
+    font-weight: bold;
 }
 
-.presentation-text{
+h2{
+    /*font-family: "Sofia Sans Condensed", sans-serif;
+    font-size: 40pt;*/
+    font-family: "Oswald", sans-serif;
+    font-size: 35pt;
+}
+
+p, span{
+    /*font-family: "Amiko", sans-serif;
+    font-size: 15pt;*/
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 20pt;
+
+}
+
+.game-title{
+    font-size: 20pt;
+}
+
+/*body{
+    background: linear-gradient(90deg, #38bccc 0%, #33cec6 25%, #56ddb5 50%, #88ea9d 75%, #bef484 100%);
+}*/
+
+.intro-section{
+    height: 95vh;
+    background: linear-gradient(150deg, rgba(56, 188, 204, .5) 0%, rgba(32, 168, 214, .5) 20%, rgba(78, 144, 211, .5) 40%, rgba(123, 115, 190, .5) 60%, rgba(154, 83, 151, .5) 80%, rgba(154, 83, 151, .5) 100%);
+/*    background: linear-gradient(150deg, rgba(56, 188, 204, .5) 0%, rgba(51, 206, 198, .5) 20%, rgba(86, 221, 181, .5) 40%, rgba(136, 234, 157, .5) 70%, rgba(190, 244, 132, .5) 100%);*/
+}
+
+.intro-text{
     width: 50%;
     height: 100%;
     position: relative;
 }
 
-#pre-text-1{
+#intro-text-1{
     position: absolute;
     top: 35%;
-    left: 20%;
-    font-size: 40pt;
-    font-weight: bold;
+    left: 10%;
 }
 
-#pre-text-2{
+#intro-text-2{
     position: absolute;
     top: 65%;
     left: 5%;
-    font-size: 30pt;
 
 }
 
-.presentation-images{
+.intro-images{
     width: 50%;
     height: 100%;
     position: absolute;
@@ -50,11 +80,12 @@ main > section{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 
 .game-card{
     border-radius: 20px;
-    background-color: #fff;
+    background-color: rgba(223, 220, 220, 0.5);
     position: relative;
 
     margin: 20px 0;
@@ -65,7 +96,7 @@ main > section{
     position: absolute;
     height: 45%;
     width: 100%;
-    background-color: #0d4754;
+    background-color: rgba(56, 188, 204, 0.6);
     border-radius: 20px 20px 0 0;
 }
 
@@ -83,7 +114,7 @@ main > section{
     width: 45vw;
     border-radius: 30px;
     padding: 3px;
-    background-color: #0d4754;
+    background-color: rgba(56, 188, 204, 0.6);
 }
 
 .game-card-image img{
@@ -102,9 +133,39 @@ main > section{
     padding-top: 10px;
 }
 
-.game-title{
-    font-weight: bold;
-    font-size: 150%;
+
+
+.presentation-section{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.presentation-text{
+    width: 50%;
+    padding-left: 30px;
+
+}
+
+.presentation-title{
+}
+
+.presentation-description{
+
+}
+
+.presentation-image{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+
+}
+
+.presentation-image img{
+    height: 50vh;
+    width: 40vw;
+
+
 }
 
 
@@ -130,8 +191,6 @@ main > section{
 }
 
 .actus-title{
-    font-weight: bold;
-    font-size: 30pt;
 }
 
 .actus-description{
@@ -147,6 +206,8 @@ main > section{
 
 .stats-image{
     width: 50%;
+    display: flex;
+    justify-content: end;
 }
 
 .stats-image img{
@@ -160,10 +221,22 @@ main > section{
 }
 
 .stats-title{
-    font-weight: bold;
-    font-size: 30pt;
 }
 
 .stats-description{
 
+}
+
+.map-section{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.map-map{
+    width: 50%;
+}
+
+.map-text{
+    width: 50%;
 }
