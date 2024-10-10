@@ -1,21 +1,37 @@
 main{
     z-index: 1;
-    padding-top: 66px;
+    /*padding-top: 66px;*/
     overflow-x: hidden;
 }
-
 header{
     z-index: 10;
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 
-.navigation-bar{
+.navbar{
+    transition: all 0.5s;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-scrolled{
     background-color: #d2dae2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-item{
+    padding-right: 20px;
+}
+
+.nav-link{
+    font-size: 16pt;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.5s;
+
+}
+
+.nav-link:hover{
+    scale: 1.2;
+    color: #1c626a;
 }
 
 .icon-link{
