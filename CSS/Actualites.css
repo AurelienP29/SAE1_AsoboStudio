@@ -1,42 +1,28 @@
-.navigation-bar{
-  background-color: #d2dae2;
+main {
+    height: 100vh;
+    margin: 66px 0;
 }
 
 
-
-.footer-nabu{
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.footer-nabu > div{
-  padding: 0 !important;
-}
-
-.footer-text-links{
-  padding-right: 25px;
-}
-
-
-
-
-h1{
+h1 {
     text-align: center;
     margin-top: 2px;
     color: rgb(31, 139, 182);
-    font-size:2.9rem;
+    font-size: 2.9rem;
     font-weight: bold;
     letter-spacing: 1px;
     text-shadow: 1px 1px 1px gray;
-    
+
 }
-h2.title{
-  margin-left: 20px;
-  margin-top: 2px;
-  color: rgb(31, 139, 182);
-  font-size:2rem;
-  letter-spacing: 1px;
-  
-  
+
+h2.title {
+    margin-left: 20px;
+    margin-top: 2px;
+    color: rgb(31, 139, 182);
+    font-size: 2rem;
+    letter-spacing: 1px;
+
+
 }
 
 .premiere_parti {
@@ -48,12 +34,10 @@ h2.title{
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
     align-items: center;
     justify-items: center;
-  }
+}
 
 
-
-
-main#carousel {
+div#carousel {
     /* background-color: #853131; */
     grid-row: 1 / 2;
     grid-column: 1 / 8;
@@ -66,10 +50,10 @@ main#carousel {
     --middle: 3;
     --position: 1;
     pointer-events: none;
-  }
+}
 
 
-  div.hautimage {
+div.hautimage {
     border-radius: 5px;
     margin-left: 600px;
     position: absolute;
@@ -79,92 +63,101 @@ main#carousel {
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
-    transform: rotateY(calc(-10deg * var(--r)))
-      translateX(calc(-300px * var(--r)));
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
-  }
-  div.textebas{
+}
+
+div.textebas {
     color: azure;
-   border-bottom-left-radius: 5px;
-   border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     margin-top: 230px;
     background-color: #141011;
     width: 300px;
     height: 70px;
-  }
-  
-  div.hautimage:nth-of-type(1) {
+}
+
+div.hautimage:nth-of-type(1) {
     --offset: 1;
     background-color: #90f1ef;
-  }
-  div.hautimage:nth-of-type(2) {
+}
+
+div.hautimage:nth-of-type(2) {
     --offset: 2;
     background-color: #ff70a6;
-  }
-  div.hautimage:nth-of-type(3) {
+}
+
+div.hautimage:nth-of-type(3) {
     --offset: 3;
     background-color: #ff9770;
-  }
-  div.hautimage:nth-of-type(4) {
+}
+
+div.hautimage:nth-of-type(4) {
     --offset: 4;
     background-color: #ffd670;
-  }
-  div.hautimage:nth-of-type(5) {
+}
+
+div.hautimage:nth-of-type(5) {
     --offset: 5;
     background-color: #e9ff70;
-  }
-  
-  input:nth-of-type(1) {
+}
+
+input:nth-of-type(1) {
     margin-right: 30px;
     margin-top: -280px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-  }
-  input:nth-of-type(1):checked ~ main#carousel {
+}
+
+input:nth-of-type(1):checked ~ main#carousel {
     --position: 1;
-  }
-  
-  input:nth-of-type(2) {
+}
+
+input:nth-of-type(2) {
     margin-left: 30px;
-    margin-top:  -280px;
+    margin-top: -280px;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-  }
-  input:nth-of-type(2):checked ~ main#carousel {
+}
+
+input:nth-of-type(2):checked ~ main#carousel {
     --position: 2;
-  }
-  
-  input:nth-of-type(3) {
+}
+
+input:nth-of-type(3) {
     margin-left: 70px;
-    margin-top:  -280px;
+    margin-top: -280px;
     grid-column: 4 /5;
     grid-row: 2 / 3;
-  }
-  input:nth-of-type(3):checked ~ main#carousel {
+}
+
+input:nth-of-type(3):checked ~ main#carousel {
     --position: 3;
-  }
-  
-  input:nth-of-type(4) {
+}
+
+input:nth-of-type(4) {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
-  }
-  input:nth-of-type(4):checked ~ main#carousel {
+}
+
+input:nth-of-type(4):checked ~ main#carousel {
     --position: 4;
-  }
-  
-  input:nth-of-type(5) {
+}
+
+input:nth-of-type(5) {
     grid-column: 6 / 7;
     grid-row: 2 / 3;
-  }
-  input:nth-of-type(5):checked ~ main#carousel {
+}
+
+input:nth-of-type(5):checked ~ main#carousel {
     --position: 5;
-  }
- 
-    input[type="radio"] {
-       
-        transform: scale(2.2); 
-     
-    }
+}
+
+input[type="radio"] {
+
+    transform: scale(2.2);
+
+}
 
    
   
