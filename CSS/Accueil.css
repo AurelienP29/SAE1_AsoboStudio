@@ -99,6 +99,7 @@ main > section {
     border-radius: 30px;
     object-fit: cover;
     border: 3px solid #fff;
+    cursor: pointer;
 }
 
 .game-card-text {
