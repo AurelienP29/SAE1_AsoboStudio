@@ -17,7 +17,7 @@ main > section {
 
 .intro-section {
     height: 100vh;
-    background: linear-gradient(150deg, rgba(56, 188, 204, .5) 0%, rgba(51, 206, 198, .5) 20%, rgba(86, 221, 181, .5) 40%, rgba(136, 234, 157, .5) 70%, rgba(190, 244, 132, .5) 100%);
+    background: linear-gradient(180deg, rgba(56, 188, 204, .5) 0%, rgba(51, 206, 198, .5) 20%, rgba(86, 221, 181, .5) 40%, rgba(136, 234, 157, .5) 60%, rgba(190, 244, 132, .5) 80%, rgba(249, 248, 113, .5) 100%);
 }
 
 .intro-text {
@@ -72,7 +72,7 @@ main > section {
     position: absolute;
     height: 45%;
     width: 100%;
-    background-color: rgba(56, 188, 204, 0.6);
+    background-color: rgba(249, 248, 113, .5);
     border-radius: 20px 20px 0 0;
 }
 
@@ -90,7 +90,7 @@ main > section {
     width: 45vw;
     border-radius: 30px;
     padding: 3px;
-    background-color: rgba(56, 188, 204, 0.6);
+    background-color: rgba(249, 248, 113, .5);
 }
 
 .game-card-image img {
@@ -109,11 +109,20 @@ main > section {
     padding-top: 10px;
 }
 
+.game-more-info{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.game-more-info:hover{
+    transform: scale(125%);
+}
 
 .presentation-section {
     height: 50vh;
     display: flex;
     align-items: center;
+    background-color: rgba(190, 244, 132, .5);
 }
 
 .presentation-text {
@@ -148,6 +157,7 @@ main > section {
     height: 50vh;
     display: flex;
     align-items: center;
+    background-color: rgba(136, 234, 157, .5);
 
 }
 
@@ -176,6 +186,7 @@ main > section {
     height: 50vh;
     display: flex;
     align-items: center;
+    background-color: rgba(86, 221, 181, .5);
 }
 
 .stats-image {
@@ -205,6 +216,7 @@ main > section {
     height: 50vh;
     display: flex;
     align-items: center;
+    background-color: rgba(51, 206, 198, .5);
 }
 
 .map-map {
