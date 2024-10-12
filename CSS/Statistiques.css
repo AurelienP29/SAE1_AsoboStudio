@@ -1,5 +1,5 @@
 main {
-
+    margin: 66px 0;
 }
 
 main section {
@@ -8,9 +8,8 @@ main section {
     background-color: rgba(173, 216, 230, 0.459);
     border-style: dashed;
     border-color: hsla(0, 0%, 0%, 0.1);
-    
-}
 
+}
 
 
 /*--------Intro--------*/
@@ -20,7 +19,7 @@ main section {
 }
 
 .titre {
-    width: 
+    /*width: */
 }
 
 .txtIntro {
@@ -34,15 +33,14 @@ main section {
 #analyses {
     display: flex;
     position: relative;
-    align-items:flex-start;
-    ;
+    align-items: flex-start;;
 }
 
 #analyses div {
     background-color: lightgray;
     padding: 4px;
     margin: 10px;
-    
+
 }
 
 table {
@@ -64,7 +62,7 @@ table {
     display: flex;
     position: relative;
 
-    
+
 }
 
 /*--------Partie Effectif--------*/
@@ -107,10 +105,10 @@ table {
 
 }
 
-.emsnCarbnTxt {
+.emsnCarbnTxt  {
 
 }
 
-.emsnCarbnGraph {
+.emsnCarbnGraph  {
 
 }

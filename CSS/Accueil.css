@@ -1,4 +1,4 @@
-main > section{
+main > section {
     margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
@@ -7,30 +7,7 @@ main > section{
     background-color: #f1f1f1;
 }
 
-h1{
-    /*font-family: "Anton", sans-serif;
-    font-size: 55pt;*/
-    font-family: "Gabarito", sans-serif;
-    font-size: 55pt;
-    font-weight: bold;
-}
-
-h2{
-    /*font-family: "Sofia Sans Condensed", sans-serif;
-    font-size: 40pt;*/
-    font-family: "Oswald", sans-serif;
-    font-size: 35pt;
-}
-
-p, span{
-    /*font-family: "Amiko", sans-serif;
-    font-size: 15pt;*/
-    font-family: "Afacad Flux", sans-serif;
-    font-size: 20pt;
-
-}
-
-.game-title{
+.game-title {
     font-size: 20pt;
 }
 
@@ -38,32 +15,31 @@ p, span{
     background: linear-gradient(90deg, #38bccc 0%, #33cec6 25%, #56ddb5 50%, #88ea9d 75%, #bef484 100%);
 }*/
 
-.intro-section{
+.intro-section {
     height: 100vh;
-    /*background: linear-gradient(150deg, rgba(56, 188, 204, .5) 0%, rgba(32, 168, 214, .5) 20%, rgba(78, 144, 211, .5) 40%, rgba(123, 115, 190, .5) 60%, rgba(154, 83, 151, .5) 80%, rgba(154, 83, 151, .5) 100%);*/
-        background: linear-gradient(150deg, rgba(56, 188, 204, .5) 0%, rgba(51, 206, 198, .5) 20%, rgba(86, 221, 181, .5) 40%, rgba(136, 234, 157, .5) 70%, rgba(190, 244, 132, .5) 100%);
+    background: linear-gradient(150deg, rgba(56, 188, 204, .5) 0%, rgba(51, 206, 198, .5) 20%, rgba(86, 221, 181, .5) 40%, rgba(136, 234, 157, .5) 70%, rgba(190, 244, 132, .5) 100%);
 }
 
-.intro-text{
+.intro-text {
     width: 50%;
     height: 100%;
     position: relative;
 }
 
-#intro-text-1{
+#intro-text-1 {
     position: absolute;
     top: 35%;
     left: 10%;
 }
 
-#intro-text-2{
+#intro-text-2 {
     position: absolute;
     top: 65%;
     left: 5%;
 
 }
 
-.intro-images{
+.intro-images {
     width: 50%;
     height: 100%;
     position: absolute;
@@ -71,11 +47,11 @@ p, span{
     right: 0;
 }
 
-.swiper{
+.swiper {
     width: 75%;
 }
 
-.games-section{
+.games-section {
     height: 50vh;
     display: flex;
     align-items: center;
@@ -83,7 +59,7 @@ p, span{
     background-color: white;
 }
 
-.game-card{
+.game-card {
     border-radius: 20px;
     background-color: rgba(223, 220, 220, 0.5);
     position: relative;
@@ -91,7 +67,7 @@ p, span{
     margin: 20px 0;
 }
 
-.game-card::before{
+.game-card::before {
     content: "";
     position: absolute;
     height: 45%;
@@ -100,7 +76,7 @@ p, span{
     border-radius: 20px 20px 0 0;
 }
 
-.game-card-content{
+.game-card-content {
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -109,7 +85,7 @@ p, span{
     z-index: 3;
 }
 
-.game-card-image{
+.game-card-image {
     height: 35vh;
     width: 45vw;
     border-radius: 30px;
@@ -117,7 +93,7 @@ p, span{
     background-color: rgba(56, 188, 204, 0.6);
 }
 
-.game-card-image img{
+.game-card-image img {
     height: 100%;
     width: 100%;
     border-radius: 30px;
@@ -125,7 +101,7 @@ p, span{
     border: 3px solid #fff;
 }
 
-.game-card-text{
+.game-card-text {
     margin: 5px;
     display: flex;
     justify-content: space-between;
@@ -134,34 +110,33 @@ p, span{
 }
 
 
-
-.presentation-section{
+.presentation-section {
     height: 50vh;
     display: flex;
     align-items: center;
 }
 
-.presentation-text{
+.presentation-text {
     width: 50%;
     padding-left: 30px;
 
 }
 
-.presentation-title{
+.presentation-title {
 }
 
-.presentation-description{
+.presentation-description {
 
 }
 
-.presentation-image{
+.presentation-image {
     width: 50%;
     display: flex;
     justify-content: end;
 
 }
 
-.presentation-image img{
+.presentation-image img {
     height: 50vh;
     width: 40vw;
 
@@ -169,75 +144,74 @@ p, span{
 }
 
 
-
-.actus-section{
+.actus-section {
     height: 50vh;
     display: flex;
     align-items: center;
 
 }
 
-.actus-image{
+.actus-image {
     width: 50%;
 }
 
-.actus-image img{
+.actus-image img {
     height: 50vh;
     width: 40vw;
 }
 
-.actus-text{
+.actus-text {
     width: 50%;
 }
 
-.actus-title{
+.actus-title {
 }
 
-.actus-description{
+.actus-description {
 
 }
 
 
-.stats-section{
+.stats-section {
     height: 50vh;
     display: flex;
     align-items: center;
 }
 
-.stats-image{
+.stats-image {
     width: 50%;
     display: flex;
     justify-content: end;
 }
 
-.stats-image img{
+.stats-image img {
     height: 50vh;
     width: 40vw;
 }
 
-.stats-text{
+.stats-text {
     width: 50%;
     padding-left: 30px;
 }
 
-.stats-title{
+.stats-title {
 }
 
-.stats-description{
+.stats-description {
 
 }
 
-.map-section{
+.map-section {
     height: 50vh;
     display: flex;
     align-items: center;
 }
 
-.map-map{
+.map-map {
     width: 50%;
 }
 
-.map-text{
+.map-text {
     width: 50%;
 }
 
