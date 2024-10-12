@@ -6,6 +6,7 @@
     <title>Accueil - Asobo Studio</title>
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/General.css">
@@ -65,11 +66,11 @@
                 <div class="game-card swiper-slide">
                     <div class="game-card-content">
                         <div class="game-card-image">
-                            <img src="Images/Accueil/plague-tale-requiem.jpg" alt="Plague Tale:Requiem">
+                            <img onclick="plageRequiem()" src="Images/Accueil/plague-tale-requiem.jpg" alt="Plague Tale:Requiem">
                         </div>
                         <div class="game-card-text">
                             <h2 class="game-title">A Plague Tale : Requiem</h2>
-                            <span>Plus d'informations : <a href="#" class="icon-link">
+                            <span>Plus d'informations : <a onclick="plageRequiem()" class="icon-link game-more-info">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
@@ -82,11 +83,11 @@
                 <div class="game-card swiper-slide">
                     <div class="game-card-content">
                         <div class="game-card-image">
-                            <img src="Images/Accueil/flight_simulator.jpg" alt="Microsoft Flight Simulator">
+                            <img onclick="flightSim()" src="Images/Accueil/flight_simulator.jpg" alt="Microsoft Flight Simulator">
                         </div>
                         <div class="game-card-text">
                             <h2 class="game-title">Microsoft Flight Simulator</h2>
-                            <span>Plus d'informations : <a href="#" class="icon-link">
+                            <span>Plus d'informations : <a onclick="flightSim()" class="icon-link game-more-info">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
@@ -99,11 +100,11 @@
                 <div class="game-card swiper-slide">
                     <div class="game-card-content">
                         <div class="game-card-image">
-                            <img src="Images/Accueil/plague_tale_innocence.jpg" alt="Plague Tale:Innocence">
+                            <img onclick="plagueInno()" src="Images/Accueil/plague_tale_innocence.jpg" alt="Plague Tale:Innocence">
                         </div>
                         <div class="game-card-text">
                             <h2 class="game-title">A Plague Tale : Innocence</h2>
-                            <span>Plus d'informations : <a href="#" class="icon-link">
+                            <span>Plus d'informations : <a onclick="plagueInno()" class="icon-link game-more-info">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
@@ -116,11 +117,11 @@
                 <div class="game-card swiper-slide">
                     <div class="game-card-content">
                         <div class="game-card-image">
-                            <img src="Images/Accueil/the_crew_2.jpg" alt="The Crew 2">
+                            <img onclick="theCrew()" src="Images/Accueil/the_crew_2.jpg" alt="The Crew 2">
                         </div>
                         <div class="game-card-text">
                             <h2 class="game-title">The Crew 2</h2>
-                            <span>Plus d'informations : <a href="#" class="icon-link">
+                            <span>Plus d'informations : <a onclick="theCrew()" class="icon-link game-more-info">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
@@ -141,7 +142,7 @@
         <div class="presentation-text">
             <h2 class="presentation-title">Parcours pour en arriver ici</h2><br><br>
             <p class="presentation-description">Suivez l'histoire du studio et ses jeux phares pour mieux
-                comprendre qui est derrière Asobo ... <a href="#">Lire la suite</a></p>
+                comprendre qui est derrière Asobo ... <a href="presentation.html">Lire la suite</a></p>
         </div>
         <div class="presentation-image">
             <img src="Images/Accueil/presentation_image.jpg" alt="Image Présentation">
@@ -155,7 +156,7 @@
         <div class="actus-text">
             <h2 class="actus-title">Asobo autour du monde - <br>Rallye Toulouse St-Louis 38È</h2><br><br>
             <p class="actus-description">Le Rallye Toulouse - Saint Louis fait son grand retour !<br>
-                Après deux ans d'interruption liée à ... <a href="#">Lire la suite</a></p>
+                Après deux ans d'interruption liée à ... <a href="actualites.html">Lire la suite</a></p>
         </div>
     </section>
 
@@ -163,7 +164,7 @@
         <div class="stats-text">
             <h2 class="stats-title">Chiffres RH de l'année 2023</h2><br><br>
             <p class="stats-description">Dans une démarche de transparence, nous partageons nos données
-                <br>annuelles sur ... <a href="#">Lire la suite</a></p>
+                <br>annuelles sur ... <a href="statistiques.html">Lire la suite</a></p>
         </div>
         <div class="stats-image">
             <img src="Images/Accueil/stats_img.png" alt="Image Stats">
@@ -270,7 +271,6 @@
     });
 </script>
 
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     var swiper = new Swiper(".mySwiper", {
@@ -291,6 +291,7 @@
     });
 </script>
 
+<script src="JS/scripts.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
