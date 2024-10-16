@@ -11,10 +11,6 @@ main > section {
     font-size: 20pt;
 }
 
-/*body{
-    background: linear-gradient(90deg, #38bccc 0%, #33cec6 25%, #56ddb5 50%, #88ea9d 75%, #bef484 100%);
-}*/
-
 .intro-section {
     height: 100vh;
     background: linear-gradient(180deg, rgba(56, 188, 204, .5) 0%, rgba(51, 206, 198, .5) 9%, rgba(86, 221, 181, .5) 18%, rgba(136, 234, 157, .5) 27%, rgba(190, 244, 132, .5) 36%, rgba(190, 244, 132, .5) 52%, rgba(136, 234, 157, .5) 60%, rgba(86, 221, 181, .5) 75%, rgba(51, 206, 198, .5) 85%, rgba(56, 188, 204, .5) 100%);
@@ -122,8 +118,7 @@ main > section {
 .presentation-section {
     height: 50vh;
     display: flex;
-    align-items: center;/*
-    background-color: rgba(190, 244, 132, .5);*/
+    align-items: center;
     background-color: rgba(190, 244, 132, .5);
 }
 
@@ -150,7 +145,7 @@ main > section {
 .presentation-image img {
     height: 50vh;
     width: 40vw;
-
+    object-fit: cover;
 
 }
 
@@ -170,6 +165,7 @@ main > section {
 .actus-image img {
     height: 50vh;
     width: 40vw;
+    object-fit: cover;
 }
 
 .actus-text {
@@ -187,8 +183,7 @@ main > section {
 .stats-section {
     height: 50vh;
     display: flex;
-    align-items: center;/*
-    background-color: rgba(86, 221, 181, .5);*/
+    align-items: center;
     background-color: rgba(86, 221, 181, .5);
 }
 
@@ -201,6 +196,7 @@ main > section {
 .stats-image img {
     height: 50vh;
     width: 40vw;
+    object-fit: cover;
 }
 
 .stats-text {
@@ -218,13 +214,13 @@ main > section {
 .map-section {
     height: 50vh;
     display: flex;
-    align-items: center;/*
-    background-color: rgba(51, 206, 198, .5);*/
+    align-items: center;
     background-color: rgba(51, 206, 198, .5);
 }
 
 .map-map {
     width: 50%;
+    height: 100%;
 }
 
 .map-text {
