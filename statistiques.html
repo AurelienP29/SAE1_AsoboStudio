@@ -7,258 +7,368 @@
     <title>Statistiques - Asobo Studio</title>
     <link rel="shortcut icon" href="Images/a-asobo-blue.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/General.css">
     <link rel="stylesheet" href="CSS/Statistiques.css">
+    <link rel="stylesheet" href="CSS/graph.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Gabarito:wght@400..900&display=swap');
     </style>
 </head>
 
 <body>
-<header>
-    <nav class="navbar fixed-top navbar-expand-md navbar-extended-sm">
-        <div class="container-fluid nav-header">
-            <a href="index.html"><img src="Images/Asobo_Studio_Logo.png" alt="Asobo Studio Logo" height="50"
-                                      width="auto"></a>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <header>
+        <nav class="navbar fixed-top navbar-expand-md navbar-extended-sm">
+            <div class="container-fluid nav-header">
+                <a href="index.html"><img src="Images/Asobo_Studio_Logo.png" alt="Asobo Studio Logo" height="50"
+                        width="auto"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse me-auto" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="actualites.html">Actualités</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="presentation.html">Présentation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="statistiques.html">Statistiques</a>
-                </li>
-            </ul>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse me-auto" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="actualites.html">Actualités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="presentation.html">Présentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="statistiques.html">Statistiques</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!------------ Intro ------------>
+        <section id="intro">
+            <h1 class="titre">Statistiques de l'entreprise</h1>
+            <div class="txtIntro">
+                <h3>Découvrez un aperçu des principaux indicateurs financiers du studio, illustrant sa croissance
+                    continue et sa rentabilité au fil des années.</h3>
+            </div>
+        </section>
+
+        <!------------ Partie Analyses ------------>
+        <section id="analyses">
+            <h2>Info</h2>
+            <div class="info">
+
+            </div>
+
+        </section>
+
+        <!------------ Partie Chiffre d'affaire et revenu net ------------>
+        <section class="statsRevenu">
+            <h2>Chiffre d'affaire et revenu net</h2>
+            <!-- Graph HTML -->
+            <div class="graphique">
+                <div id="graph-wrapper">
+                    <div class="graph-info">
+                        <a href="javascript:void(0)" class="CA">Chiffre d'affaire en €</a>
+                        <a href="javascript:void(0)" class="RN">Revenu net en €</a>
+
+                        <a href="#" id="bars"><span></span></a>
+                        <a href="#" id="lines" class="active"><span></span></a>
+                    </div>
+                </div>
+
+                <div class="graph-container">
+                    <div id="graph-lines"></div>
+                    <div id="graph-bars"></div>
+                </div>
+                <!-- fin Graph HTML -->
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+                <script src="JS/jquery.flot.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+
+                        // Données Graph ##############################################
+                        var graphData = [{
+                            // Chiffre d'affaire
+                            data: [[2015, 7821426], [2016, 7854960], [2017, 10257863], [2018, 13726905], [2019, 15968222], [2020, 17851063], [2021, 23312449], [2022, 29541305], [2023, 30812270]],
+                            color: '#71c73e',
+                            points: { radius: 4.5, fillColor: '#71c73e' }
+                        }, {
+                            // Revenu net
+                            data: [[2015, 587244], [2016, 882824], [2017, 918935], [2018, 2848470], [2019, 2637151], [2020, 4862063], [2021, 4329737], [2022, 6070345], [2023, 7953661]],
+                            color: '#77b7c5',
+                            points: { radius: 4.5, fillColor: '#77b7c5' }
+                        }
+                        ];
+
+                        // Lignes Graph #############################################
+                        $.plot($('#graph-lines'), graphData, {
+                            series: {
+                                points: {
+                                    show: true,
+                                    radius: 6
+                                },
+                                lines: {
+                                    show: true
+                                },
+                                shadowSize: 0
+                            },
+                            grid: {
+                                color: '#646464',
+                                borderColor: 'transparent',
+                                borderWidth: 80,
+                                hoverable: true
+                            },
+                            xaxis: {
+                                tickColor: 'transparent',
+                                tickDecimals: 0
+                            },
+                            yaxis: {
+                                tickSize: 5000000
+                            }
+                        });
+
+                        // Barres Graph ##############################################
+                        $.plot($('#graph-bars'), graphData, {
+                            series: {
+                                bars: {
+                                    show: true,
+                                    barWidth: .8,
+                                    align: 'center'
+                                },
+                                shadowSize: 0
+                            },
+                            grid: {
+                                color: '#646464',
+                                borderColor: 'transparent',
+                                borderWidth: 75,
+                                hoverable: true
+                            },
+                            xaxis: {
+                                tickColor: 'transparent',
+                                tickDecimals: 0
+                            },
+                            yaxis: {
+                                tickSize: 2500000
+                            }
+                        });
+
+                        // Graph Toggle ############################################
+                        $('#graph-bars').hide();
+
+                        $('#lines').on('click', function (e) {
+                            $('#bars').removeClass('active');
+                            $('#graph-bars').fadeOut();
+                            $(this).addClass('active');
+                            $('#graph-lines').fadeIn();
+                            e.preventDefault();
+                        });
+
+                        $('#bars').on('click', function (e) {
+                            $('#lines').removeClass('active');
+                            $('#graph-lines').fadeOut();
+                            $(this).addClass('active');
+                            $('#graph-bars').fadeIn().removeClass('hidden');
+                            e.preventDefault();
+                        });
+
+                        // Tooltip #################################################
+                        function showTooltip(x, y, contents) {
+                            $('<div id="tooltip">' + contents + '</div>').css({
+                                top: y - 16,
+                                left: x + 20
+                            }).appendTo('body').fadeIn();
+                        }
+
+                        var previousPoint = null;
+
+                        $('#graph-lines, #graph-bars').bind('plothover', function (event, pos, item) {
+                            if (item) {
+                                if (previousPoint != item.dataIndex) {
+                                    previousPoint = item.dataIndex;
+                                    $('#tooltip').remove();
+                                    var x = item.datapoint[0],
+                                        y = item.datapoint[1];
+                                    showTooltip(item.pageX, item.pageY, y + '€ en ' + x);
+                                }
+                            } else {
+                                $('#tooltip').remove();
+                                previousPoint = null;
+                            }
+                        });
+
+                    });
+                </script>
+            </div>
+            <div class="statsRvnTxt">
+                <div class="StatsCA">
+                    <h3>Croissance du chiffre d'affaires d'Asobo Studio</h3>
+                    <div>Entre 2015 et 2023, Asobo Studio a connu une croissance continue de son chiffre d'affaires,
+                        passant
+                        d'environ 8 millions d'euros à plus de 28 millions d'euros. Cette progression est le reflet du
+                        succès de ses créations originales, telles que A Plague Tale: Innocence, ainsi que de ses
+                        collaborations avec de grands éditeurs internationaux comme Microsoft et Focus Home Interactive.
+                        L'innovation technologique, combinée à une stratégie éditoriale bien maîtrisée, a permis au
+                        studio
+                        de s'imposer comme un acteur clé du marché des jeux vidéo, tout en diversifiant ses sources de
+                        revenus.</div>
+                </div>
+                <div class="StatsRN">
+                    <h3>Stabilité et hausse progressive du revenu net</h3>
+                    <div>Le revenu net d'Asobo Studio a également connu une augmentation régulière entre 2015 et 2023,
+                        bien
+                        qu'à un rythme plus modéré que le chiffre d'affaires. En 2023, le revenu net atteint près de 6
+                        millions d'euros, démontrant une gestion financière solide et une rentabilité croissante. Cette
+                        performance reflète la capacité du studio à contrôler ses coûts de production tout en continuant
+                        d'investir dans le développement de nouveaux projets. Les fluctuations mineures observées au
+                        cours
+                        de certaines années montrent l'adaptabilité du studio face aux défis économiques tout en
+                        assurant
+                        une stabilité à long terme.</div>
+                </div>
+            </div>
+        </section>
+        <!------------ Partie Effectif et RH------------>
+        <div class="statsEffectif">
+            <div class="statsRH">
+                <img src="Images/Page_Statistiques/Abstnsm.png" alt="StatsAbsenteisme">
+                <img src="Images/Page_Statistiques/HS.png" alt="HeuresSupp">
+            </div>
+            <section id="EffctTxt">
+                <h2>Statistiques des effectifs</h2>
+                <div class="EffctPrgph1">
+                    En 2018, Asobo Studio comptait environ ... employés. Avec l'essor de projets comme Microsoft Flight
+                    Simulator, les effectifs ont rapidement augmenté. En 2021, l’entreprise comptait ... collaborateurs.
+                    En
+                    2022, ce nombre est passé à X employés, avec des équipes réparties entre les départements suivants :
+                    développement (..), design (..), marketing (..) et ressources humaines (..). Cette augmentation
+                    s'explique par la diversification des activités, notamment le développement de nouvelles
+                    technologies et
+                    jeux en réalité virtuelle
+                </div>
+                <div class="EffctPrgph2">
+                </div>
+            </section>
         </div>
-    </nav>
-</header>
 
-<main>
-    <!------------ Intro ------------>
-    <section id="intro">
-        <h1 class="titre">Statistiques de l'entreprise</h1>
-        <div class="txtIntro">
 
+
+        <!------------ Partie Emprunte Carbone ------------>
+        <section id="emissionsCarbone">
+            <h2>Emissions de Carbone</h2>
+            <div class="emsnCarbnTxt">
+                Depuis 2021, Asobo Studio a mis en place plusieurs initiatives pour réduire ses émissions de CO2. Grâce
+                à une utilisation accrue de serveurs alimentés par des énergies renouvelables et à l’optimisation des
+                infrastructures, l'entreprise a réduit son empreinte carbone de X % en 2021. En 2022, les émissions de
+                CO2 ont encore baissé, atteignant X tonnes. En 2023, Asobo Studio s'est fixé pour objectif d’atteindre
+                la neutralité carbone d’ici 2025, en investissant davantage dans les technologies écologiques et en
+                encourageant le télétravail pour limiter les déplacements quotidiens des employés
+            </div>
+            <div class="emsnCarbnGraph">
+                <img src="GraphEmCarbon.png" alt="Graphique des emissions de carbone">
+            </div>
+        </section>
+    </main>
+
+    <!------------Footer----------->
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
         </div>
-    </section>
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a href="https://www.facebook.com/asobostudio" target="_blank" class="social-icon__link icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                    </svg>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a href="https://x.com/AsoboStudio" target="_blank" class="social-icon__link icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path
+                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                    </svg>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a href="https://www.youtube.com/@AsoboStudio/featured" target="_blank"
+                    class="social-icon__link icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path
+                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                    </svg>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a href="https://www.linkedin.com/company/asobo-studio" target="_blank"
+                    class="social-icon__link icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                    </svg>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a href="https://www.instagram.com/asobo_studio/" target="_blank" class="social-icon__link icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                    </svg>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a href="https://www.tiktok.com/@asobostudio?" target="_blank" class="social-icon__link icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-tiktok" viewBox="0 0 16 16">
+                        <path
+                            d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
 
-    <!------------ Partie Analyses ------------>
-    <section id="analyses">
-        <h2>Info</h2>
-        <div>Clients :
-            <ul>
-                <li>Microsoft</li>
-                <li>Ubisoft</li>
-                <li>Disney Pixar</li>
-                <li>Codemasters</li>
-            </ul>
+
+        <div class="d-flex justify-content-around footer-nabu">
+            <div class="text-center p-4">
+                Site créé par :
+                <img src="Images/nabu_full_logo.png" alt="Nabulitics" height="25" width="auto">
+            </div>
+            <div class="text-center p-4">
+                Page crée par : ROYER Thomas
+            </div>
+            <div class="text-center p-4">
+                <a href="https://github.com/AurelienP29/SAE1_AsoboStudio" target="_blank">Lien vers le projet GitHub</a>
+            </div>
         </div>
-
-        <div>Jeux avec chiffres d'affaire :
-            <thead>
-            <tr>
-                <th scope="col">Jeux</th>
-                <th scope="col">Chiffre d'affaire (Millios)</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">Plague Tale : Requiem</th>
-                <td></td>
-                [Nbr]</td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                [Nbr]</td>
-            </tr>
-            <tr>
-                <th scope="row">Sarah</th>
-                <td>JavaScript frameworks</td>
-                <td>29</td>
-            </tr>
-            </tbody>
+    </footer>
 
 
-            <!--Collabs :
-        <ul>
+    <script>
+        const navEL = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 66) {
+                navEL.classList.add('navbar-scrolled');
+            } else if (window.scrollY <= 66) {
+                navEL.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
 
-            <li>Quantum Break</li>
-            <li>The Crew 2</li>
-        </ul>-->
-        </div>
-
-    </section>
-
-    <!------------ Partie Chiffre d'affaire ------------>
-    <section id="statsRevenu">
-        <h2>Statistiques du revenu</h2>
-        <div class="statsRvnTxt">
-            Asobo Studio a enregistré une croissance constante de son chiffre d'affaires ces dernières années. En
-            2020, grâce au lancement de Microsoft Flight Simulator, les revenus ont atteint X millions d'euros.
-            Cette tendance s'est poursuivie avec un chiffre d'affaires de ... millions en 2022, soit une hausse de
-            ... % par rapport à l'année précédente. En 2023, l'entreprise a encore renforcé sa position avec un
-            chiffre d'affaires de X millions d'euros, notamment grâce à l'élargissement de son portefeuille de jeux
-            et des collaborations de longue durée avec des partenaires tels que Microsoft.
-        </div>
-        <div class="statsRvnGraph">
-            <img src="Images/Page_Statistiques/graphRvn.png" alt="Graphique des Revenus">
-        </div>
-    </section>
-
-    <!------------ Partie Effectif ------------>
-    <section id="statsEffectif">
-        <h2>Statistiques des effectifs</h2>
-        <div class="statsEfctTxt">
-            En 2018, Asobo Studio comptait environ ... employés. Avec l'essor de projets comme Microsoft Flight
-            Simulator, les effectifs ont rapidement augmenté. En 2021, l’entreprise comptait ... collaborateurs. En
-            2022, ce nombre est passé à X employés, avec des équipes réparties entre les départements suivants :
-            développement (..), design (..), marketing (..) et ressources humaines (..). Cette augmentation
-            s'explique par la diversification des activités, notamment le développement de nouvelles technologies et
-            jeux en réalité virtuelle
-        </div>
-        <div class="statsEfctGraph">
-            <img src="GraphEfct.png" alt="Graphique des Effectif" class="">
-        </div>
-    </section>
-
-    <!------------ Partie Chiffres RH ------------>
-    <section id="statsRH">
-        <h2>Statistiques RH</h2>
-        <div class="statsRHTxt">
-            En 2020, Asobo Studio affichait une répartition hommes-femmes de 35 % de femmes et 65 % d'hommes.
-            Depuis, des efforts ont été faits pour favoriser la parité, et en 2023, la proportion de femmes a
-            atteint 48 %. L'ancienneté moyenne des employés a également augmenté, passant de 3 ans en 2020 à 4,5 ans
-            en 2023, ce qui montre une meilleure rétention des talents. En 2023, le taux de rotation du personnel
-            est resté faible, à seulement X %, et X % des employés ont bénéficié de promotions internes, démontrant
-            une dynamique de progression en interne.
-        </div>
-        <div class="statsRHGraph1">
-            <img src="RHGraph1.png" alt="Graphique des Effectif" class="">
-        </div>
-        <div class="statsRHGraph2">
-            <img src="RHGraph2.png" alt="Graphique des Effectif" class="">
-        </div>
-    </section>
-
-    <!------------ Partie Emprunte Carbone ------------>
-    <section id="emissionsCarbone">
-        <h2>Emissions de Carbone</h2>
-        <div class="emsnCarbnTxt">
-            Depuis 2021, Asobo Studio a mis en place plusieurs initiatives pour réduire ses émissions de CO2. Grâce
-            à une utilisation accrue de serveurs alimentés par des énergies renouvelables et à l’optimisation des
-            infrastructures, l'entreprise a réduit son empreinte carbone de X % en 2021. En 2022, les émissions de
-            CO2 ont encore baissé, atteignant X tonnes. En 2023, Asobo Studio s'est fixé pour objectif d’atteindre
-            la neutralité carbone d’ici 2025, en investissant davantage dans les technologies écologiques et en
-            encourageant le télétravail pour limiter les déplacements quotidiens des employés
-        </div>
-        <div class="emsnCarbnGraph">
-            <img src="GraphEmCarbon.png" alt="Graphique des emissions de carbone">
-        </div>
-    </section>
-</main>
-
-<!------------Footer----------->
-<footer class="footer">
-    <div class="waves">
-        <div class="wave" id="wave1"></div>
-        <div class="wave" id="wave2"></div>
-        <div class="wave" id="wave3"></div>
-        <div class="wave" id="wave4"></div>
-    </div>
-    <ul class="social-icon">
-        <li class="social-icon__item">
-            <a href="https://www.facebook.com/asobostudio" target="_blank"
-               class="social-icon__link icon-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-facebook" viewBox="0 0 16 16">
-                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon__item">
-            <a href="https://x.com/AsoboStudio" target="_blank" class="social-icon__link icon-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-twitter-x" viewBox="0 0 16 16">
-                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon__item">
-            <a href="https://www.youtube.com/@AsoboStudio/featured" target="_blank"
-               class="social-icon__link icon-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
-                     viewBox="0 0 16 16">
-                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon__item">
-            <a href="https://www.linkedin.com/company/asobo-studio" target="_blank" class="social-icon__link icon-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-linkedin" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon__item">
-            <a href="https://www.instagram.com/asobo_studio/" target="_blank" class="social-icon__link icon-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                     class="bi bi-instagram" viewBox="0 0 16 16">
-                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon__item">
-            <a href="https://www.tiktok.com/@asobostudio?" target="_blank" class="social-icon__link icon-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok"
-                     viewBox="0 0 16 16">
-                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-                </svg>
-            </a>
-        </li>
-    </ul>
-
-
-    <div class="d-flex justify-content-around footer-nabu">
-        <div class="text-center p-4">
-            Site créé par :
-            <img src="Images/nabu_full_logo.png" alt="Nabulitics" height="25" width="auto">
-        </div>
-        <div class="text-center p-4">
-            Page crée par : ROYER Thomas
-        </div>
-        <div class="text-center p-4">
-            <a href="https://github.com/AurelienP29/SAE1_AsoboStudio" target="_blank">Lien vers le projet GitHub</a>
-        </div>
-    </div>
-</footer>
-
-
-<script>
-    const navEL = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 66) {
-            navEL.classList.add('navbar-scrolled');
-        } else if (window.scrollY <= 66) {
-            navEL.classList.remove('navbar-scrolled');
-        }
-    });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
