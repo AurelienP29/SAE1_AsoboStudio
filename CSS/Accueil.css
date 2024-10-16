@@ -43,6 +43,11 @@ main > section {
     right: 0;
 }
 
+.intro-images img{
+    height: 100%;
+    width: auto;
+}
+
 .swiper {
     width: 75%;
 }
@@ -227,3 +232,7 @@ main > section {
     width: 50%;
 }
 
+iframe{
+    width: 80%;
+    height: 100%;
+}

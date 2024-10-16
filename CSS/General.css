@@ -24,6 +24,11 @@ header {
     z-index: 10;
 }
 
+header img{
+    height: 50px;
+    width: auto;
+}
+
 .navbar {
     transition: all 0.5s;
     backdrop-filter: blur(10px);
@@ -70,6 +75,11 @@ header {
 .footer-nabu > div > a {
     display: inline-block;
     color: black;
+}
+
+.footer-nabu img{
+    height: 25px;
+    width: auto;
 }
 
 .footer-text-links {
