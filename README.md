@@ -23,7 +23,8 @@ Le but est de faire connaitre l'expertise unique d'Asobo et d’offrir aux visit
 
 ## Choix de conception  
 
-Pour la conception du site, nous nous sommes grandement inspirés du site officiel de AsoboStudio (disponible [ici](https://www.asobostudio.com/)), et nous nous sommes inspiré du site de FlareDepartment comme référence (disponible [ici](https://flaredepartment.com/)).    
+Pour la conception du site, nous nous sommes grandement inspirés du site officiel de AsoboStudio (disponible [ici](https://www.asobostudio.com/)), et nous nous sommes inspiré du site de FlareDepartment comme référence (disponible [ici](https://flaredepartment.com/)).
+
 
 
 ## Développement Site Web et Validation des pages
