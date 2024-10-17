@@ -214,6 +214,7 @@ div#carousel {
   width: 60%;
   height: 400px;
   box-shadow: 1px 1px 1px gray;
+  background: linear-gradient(to bottom,  #38BCCC 0%,#88EA9D 100%);
  } 
  .CONtainer-item .texte2{
   border: 1px solid black;
@@ -222,6 +223,7 @@ div#carousel {
   width: 60%;
   height: 360px;
   box-shadow: 1px 1px 1px gray;
+  background: linear-gradient(to bottom,  #38BCCC 0%,#88EA9D 100%);
  }
  .CONtainer-item .texte3{
   border: 1px solid black;
@@ -230,17 +232,19 @@ div#carousel {
   width: 60%;
   height: 390px;
   box-shadow: 1px 1px 1px gray;
+  background: linear-gradient(to bottom,  #38BCCC 0%,#88EA9D 100%);
  }
  div.texte1 h3{
-  color: rgb(31, 139, 182);
+  color: rgb(3, 37, 50);
   font-weight: bold;
+     
  }
  div.texte2 h3{
-  color: rgb(31, 139, 182);
+ color: rgb(3, 37, 50);
   font-weight: bold;
  }
  div.texte3 h3{
-  color: rgb(31, 139, 182);
+color: rgb(3, 37, 50);
   font-weight: bold;
  }
  div.texte1 h3, p {
