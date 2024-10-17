@@ -6,7 +6,6 @@ main {
     width: 300%;
     max-width: 1000px;
     height: 75px;
-    background-color: #dee2e6;
     color: #495057;
     display: flex;
     justify-content: center;
@@ -21,7 +20,7 @@ main {
 .Text {
     max-width: 1250px;
     height: 350pxpx;
-    background-color: #f1f3f5;
+    background: linear-gradient( #38BCCC  0%,#33CEC6 50%,#56DDB5 100%);
     padding: 20px;
     border: 1px solid #ced4da;
     border-radius: 5px;
@@ -58,19 +57,21 @@ hr {
 .titre, .texte, .image-container {
     border: 2px solid #adb5bd;
     padding: 15px;
-    background-color: #dee2e6;
     padding-top: 30px;
+    background: linear-gradient( #56DDB5  0%,#33CEC6 50%,#38BCCC 100%);
 }
 
 .titre {
     font-weight: bold;
     text-align: center;
     font-size: 1.2rem;
+    background:#56DDB5;
 }
 
 .texte {
     height: 200px;
     max-width: 300px;
+    background: linear-gradient( #56DDB5  0%,#33CEC6 50%,#38BCCC 100%);
 }
 
 .image-container img {
@@ -88,7 +89,6 @@ hr {
     gap: 20px;
     padding-left: 50px;
     padding-right: 50px;
-
 }
 
 .image-container img {
@@ -106,17 +106,19 @@ hr {
 
 .titre, .texte, .image-container {
     border: 2px solid #adb5bd;
+    background: linear-gradient( #56DDB5  0%,#33CEC6 50%,#38BCCC 100%);
     padding: 15px;
-    background-color: #dee2e6;
 }
 
 .titre {
     font-weight: bold;
     text-align: center;
     font-size: 1.2rem;
+    background:#56DDB5;
 }
 
 .texte {
     height: 310px;
     max-width: 800px;
+    background: linear-gradient( #56DDB5  0%,#33CEC6 50%,#38BCCC 100%);
 }
