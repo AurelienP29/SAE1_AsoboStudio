@@ -5,6 +5,8 @@ main > section {
     align-items: center;
     position: relative;
     background-color: #f1f1f1;
+
+    box-shadow:0 5px 5px #a3a3a3;
 }
 
 .game-title {
@@ -58,6 +60,8 @@ main > section {
     align-items: center;
     justify-content: center;
     background-color: white;
+
+    box-shadow: none;
 }
 
 .game-card {
@@ -66,6 +70,7 @@ main > section {
     position: relative;
 
     margin: 20px 0;
+    box-shadow:0 5px 5px #a3a3a3;
 }
 
 .game-card::before {
