@@ -1,13 +1,9 @@
-*, div {
+*,
+div {
     font-size: 20px;
 }
 
-
-main {
-    margin: 66px 0;
-}
-
-h1, h2{
+h2 {
     margin-left: 20px;
     font-weight: bold;
 }
@@ -16,111 +12,154 @@ h3 {
     margin-left: 30px;
 }
 
-main div{font-weight: 500;}
+main div {
+    font-weight: 500;
+}
+
+hr {
+    margin: 100px auto 100px auto;
+    border-top: solid 15px hsla(195, 53%, 79%, 0.650);
+    width: 1000px;
+    border-radius: 200px;
+}
 
 /*--------Intro--------*/
 #intro {
-    background-image: url('');
-    height: 400px;
+    background: linear-gradient(90deg, rgba(56, 188, 204, .5) 0%, rgba(51, 206, 198, .5) 9%, rgba(86, 221, 181, .5) 18%, rgba(136, 234, 157, .5) 27%, rgba(190, 244, 132, .5) 36%);    display: flex;
+    box-shadow: 0px 0px 5px 5px #b4b4b4;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 600px;
+    margin-bottom: 60px;
+    padding-top: 66px;
 }
 
-.titre {
-    /*width: */
+h1 {
+    font-size: 80px;
+    margin-left: 20px;
 }
 
-.txtIntro {
+.IntroTxt {
     margin-left: 30px;
-    max-width: 900px;
+    max-width: 950px;
 }
 
-/*--------Parties--------*/
-
-
-/*----------- Partie Analyses -----------*/  
-#analyses {
-
+.Illu {
+    max-height: 600px;
 }
 
-#analyses .info{
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    background-color: lightgray;
-    padding: 4px;
-    margin: 10px 0px 50px 0px;
-
-}
-
-table {
-    border-style: dotted;
-    border: 1px;
-}
 
 /*--------Partie Chiffre d'affaire/Revenu net--------*/
 #statsRevenu {
     display: flex;
     position: relative;
     align-items: flex-start;
-    
 }
-.statsRvnTxt h3{
+
+.statsRvnTxt h3 {
     font-weight: 700;
 }
 
-.StatsCA, .StatsRN{
-    border-radius: 5px;
+.StatsCA,
+.StatsRN {
+    border-radius: 10px;
     max-width: 900px;
     padding: 20px;
-    margin: 30px 20px 30px 50px;
+    margin: 30px 20px 40px 50px;
 }
 
 
 
-.StatsCA{background: linear-gradient(to bottom,  #38BCCC 0%,#88EA9D 100%);
-    box-shadow: 0px 0px 5px 5px #33CEC6;}
-.StatsRN{background: linear-gradient(to bottom,  #88EA9D 0%,#38BCCC 100%);
-    box-shadow: 0px 0px 5px 5px #33CEC6;}
+.StatsCA {
+    background: linear-gradient(to bottom, #38bdcc85 0%, #88ea9d85 100%);
+}
+
+.StatsRN {
+    background: linear-gradient(to bottom, #88ea9d85 0%, #38bdcc85 100%);
+    margin-bottom: 80px;
+}
 
 
 .graphique {
-	float: right;
-    margin: 15px 30px 15px 35px;
+    float: right;
+    margin: 50px 30px 15px 35px;
 }
 
 /*--------Partie Effectif et RH--------*/
 #EffctRH {
-    margin: 200px 30px 0px 30px;
+    margin: 80px 30px 0px 30px;
 }
 
-.RH{
+.EffctTxt{
+    background: linear-gradient(to bottom,  #38bdcc 0%, #56DDB5 50%,#ffffff 100%);
+    padding: 15px 15px 60px 15px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.RH {
     display: flex;
 }
 
 
-.RhParagraph{
+.RhParagraph {
     float: right;
-    margin: 20px 10px 10px 10px;
+    margin: 0px 10px 10px 10px;
 }
 
-.Abs, .HS{
+.EffctTxt {}
+
+.Abs,
+.HS {
     display: flex;
 }
-.AbsTxt, .HSTxt{
+
+
+.AbsTxt,
+.HSTxt {
+    padding: 15px 30px 0px 30px;
     margin-top: 60px;
+    border-radius: 10px;
+}
+
+.AbsTxt {
+    background: linear-gradient(to bottom, #38bdcc85 0%, #88ea9d85 100%);
+    max-height: 250px;
+}
+
+.HSTxt {
+    background: linear-gradient(to bottom, #88ea9d85 0%, #38bdcc85 100%);
+    max-height: 280px;
+}
+
+.GrphStsAbs,
+.GrphStsHS {
+    min-width: 625px;
+    border: solid 12px #ececec;
+    border-radius: 50px;
+    margin: 20px 20px 15px 20px;
 }
 
 /*--------Partie Emprunte Carbone--------*/
-#emissionsCarbone {
+#SagardNewGen {    
+    background: linear-gradient(to right,  #56DDB5 0%, #88EA9D 50%,#ffffff 100%);
+    padding: 15px 15px 60px 50px;
+    border-radius: 15px 0px 0px 15px;    
+    flex: wrap row;
+    max-width: fit-content;
+    margin: 100px auto 150px auto;
+}
+
+.SagardTxt {
+    display: flex;
+    max-width: 1200px;
+}
+
+.SagardNGLogo {
+    background-color: white;
     position: relative;
-    justify-content: end;
-    margin: 150px 20px 150px 20px;
-
-}
-
-.emsnCarbnTxt  {
-
-}
-
-.emsnCarbnGraph  {
-
+    display:flex;
+    float: right;
+    border: solid 12px #ececec;
+    border-radius: 50px;
+    margin: 20px 20px 20px 20px;
 }
