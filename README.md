@@ -44,7 +44,7 @@ Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2
 
 **Auteur : NGOM Ibrahima**  
 
-Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html)
+Verification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2Faurelienp29.github.io%2FSAE1_AsoboStudio%2Factualites.html)
 
 ![capture d'écran de la conformité de la page ...](doc/W3C_actualites.jpeg)
 
