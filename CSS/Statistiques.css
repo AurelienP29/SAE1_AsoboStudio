@@ -53,7 +53,6 @@ h1 {
 #statsRevenu {
     display: flex;
     position: relative;
-    align-items: flex-start;
 }
 
 .statsRvnTxt h3 {
@@ -139,7 +138,7 @@ h1 {
     margin: 20px 20px 15px 20px;
 }
 
-/*--------Partie Emprunte Carbone--------*/
+/*--------Partie SagardNewGen--------*/
 #SagardNewGen {    
     background: linear-gradient(to right,  #56DDB5 0%, #88EA9D 50%,#ffffff 100%);
     padding: 15px 15px 60px 50px;
