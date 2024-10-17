@@ -35,9 +35,9 @@ Pour la conception du site, nous nous sommes grandement inspirés du site offici
 Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2Faurelienp29.github.io%2FSAE1_AsoboStudio%2Findex.html)
 
 
-![capture d'écran de la conformité de la page ...](Images/Verifications/W3C_accueil.png)
+![capture d'écran de la conformité de la page ...](doc/W3C_accueil.png)
 
-![capture d'écran sur le site https://www.ecoindex.fr/ pour tester l'eco-conception](Images/Verifications/Ecoindex_accueil.png)
+![capture d'écran sur le site https://www.ecoindex.fr/ pour tester l'eco-conception](doc/Ecoindex_accueil.png)
 (Gros poid et beaucoup de requêtes à cause de la carte interactive)
 
 ### Page d'actualité
