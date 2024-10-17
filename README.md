@@ -46,9 +46,9 @@ Vérification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2
 
 Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html)
 
-![capture d'écran de la conformité de la page ...](doc/capture_1_W3C.png)
+![capture d'écran de la conformité de la page ...](doc/W3C_actualites)
 
-![capture d'écran sur le site https://www.ecoindex.fr/ pour tester l'eco-conception](doc/capture_1_ecoconcept.png)
+![capture d'écran sur le site https://www.ecoindex.fr/ pour tester l'eco-conception](doc/Ecoindex_actualites)
 
 ### Page de présentation
 
