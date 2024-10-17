@@ -94,17 +94,17 @@ div#carousel {
 
   }
   
-  div.hautimage:nth-of-type(1) {
+ div.hautimage:nth-of-type(1) {
     --offset: 1;
-    background-color: black;
+    background: linear-gradient(to bottom,  #38BCCC 0%,#88EA9D 100%);
   }
   div.hautimage:nth-of-type(2) {
     --offset: 2;
-    background-color:black;
+    background: linear-gradient(to bottom,  #38BCCC 0%,#88EA9D 100%);
   }
   div.hautimage:nth-of-type(3) {
     --offset: 3;
-    background-color: black;
+    background: linear-gradient(to bottom,  #38BCCC 0%,#88EA9D 100%);
   }
  
   
