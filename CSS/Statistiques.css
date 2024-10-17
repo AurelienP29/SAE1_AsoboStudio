@@ -88,32 +88,32 @@ table {
 }
 
 /*--------Partie Effectif et RH--------*/
-.statsEffectif{
+#EffctRH {
+    margin: 200px 30px 0px 30px;
+}
+
+.RH{
     display: flex;
 }
 
-#EffctTxt {
+
+.RhParagraph{
     float: right;
-    max-width: 1000px;
-    margin: 30px 20px 30px 50px;
+    margin: 20px 10px 10px 10px;
 }
 
-.EffctPrgph2{
-    margin-top: 20px;
-}
-
-.statsRH{
+.Abs, .HS{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 750px;
 }
+.AbsTxt, .HSTxt{
+    margin-top: 60px;
+}
+
 /*--------Partie Emprunte Carbone--------*/
 #emissionsCarbone {
     position: relative;
     justify-content: end;
-    margin-top: 150px;
-
+    margin: 150px 20px 150px 20px;
 
 }
 
