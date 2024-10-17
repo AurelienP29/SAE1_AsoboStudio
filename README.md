@@ -48,7 +48,7 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&sho
 
 ![capture d'écran de la conformité de la page ...](doc/W3C_actualites.jpeg)
 
-![capture d'écran sur le site https://www.ecoindex.fr/ pour tester l'eco-conception](doc/Ecoindex_actualites.png)
+![capture d'écran sur le site https://www.ecoindex.fr/ pour tester l'eco-conception](doc/Ecoindex_actualites.jpeg)
 
 ### Page de présentation
 
