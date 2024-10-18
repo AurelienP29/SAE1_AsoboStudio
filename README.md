@@ -21,9 +21,13 @@ Ce site a pour objectif de présenter Asobo Studio, un acteur clé dans l'indust
 
 Le but est de faire connaitre l'expertise unique d'Asobo et d’offrir aux visiteurs une vue d'ensemble de son évolution et de ses réalisations.
 
+Vous trouverez dans ce dépot, ou [ici](doc/rapport_eco_asobo.pdf) un rapport économique détaillé de l'entreprise.
+
 ## Choix de conception  
 
 Pour la conception du site, nous nous sommes grandement inspirés du site officiel de AsoboStudio (disponible [ici](https://www.asobostudio.com/)), et nous nous sommes inspiré du site de FlareDepartment comme référence (disponible [ici](https://flaredepartment.com/)).
+
+Pour la charte graphique validé avec le client, nous avons suivit [ce modèle](doc/charte_graphique.pdf).
 
 
 
@@ -55,11 +59,11 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2F
 
 **Auteur : OTTINGER Axel**  
 
-Verification W3C : [Détail ICI](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fdemo-am90.github.io%2Fs1-demo%2Findex.html)
+Verification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2Faurelienp29.github.io%2FSAE1_AsoboStudio%2Fpresentation.html)
 
-![capture d'écran de la conformité de la page ...](doc/capture_1_W3C.png)
+![capture d'écran de la conformité de la page ...](doc/W3C_presentation.png)
 
-![capture d'écran sur le site https://www.ecoindex.fr/ pour tester l'eco-conception](doc/capture_1_ecoconcept.png)
+![capture d'écran sur le site https://www.ecoindex.fr/ pour tester l'eco-conception](doc/Ecoindex_presentation.png)
 
 ### Page de statistiques
 
@@ -83,10 +87,16 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2F
 - OTTINGER Axel
 - NGOM Ibrahima
 
+### Création charte graphique
+
+- PAILLARD Aurélien (palette de couleur)
+- ROYER Thomas (zoning / wireframe)
+- OTTINGER Axel (police d'écriture)
+- NGOM Ibrahima (aide sur tout les points)
 
 ### Rapport économique
 
-- PAILLARD Aurélien
+- PAILLARD Aurélien (mise en page)
 - ROYER Thomas
 - OTTINGER Axel
 - NGOM Ibrahima
@@ -96,6 +106,7 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2F
 - PAILLARD Aurélien
   - Page d’accueil
   - "Template" de page (Navbar/Footer)
+  - Fonctionnalité de changement de langue, et traduction de toute les pages
 
 - ROYER Thomas
   - Page statistiques
@@ -109,4 +120,4 @@ Verification W3C : [Détail ICI](https://validator.w3.org/nu/?doc=https%3A%2F%2F
 
 ## Contributeurs
 
-![capture d'écran de sur la contribution des membres du projet](doc/livrable2_contributors.png)
+![capture d'écran de sur la contribution des membres du projet](doc/contributors_commits.png)
